@@ -62,6 +62,9 @@ Generate local files
 
 ```bash
 $ git clone git@github.com:pokt-network/pocket.git  && cd pocket
+$ go install google.golang.org/protobuf/cmd/protoc-gen-go@v1.28
+$ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@v1.2
+$ export PATH="$PATH:$(go env GOPATH)/bin"
 $ make protogen_clean && make protogen_local
 $ make mockgen
 $ make go_clean_deps
